@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_budget"
+        android:icon="@drawable/ic_baseline_attach_money_24"
+        android:title="@string/title_budget" />
+
+    <item
+        android:id="@+id/navigation_plan"
+        android:icon="@drawable/ic_baseline_event_note_24"
+        android:title="@string/title_plan" />
+
+    <item
+        android:id="@+id/navigation_convert"
+        android:icon="@drawable/ic_calculator_24"
+        android:title="@string/title_convert" />
+
+</menu>

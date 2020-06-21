@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Travel Helper</string>
+    <string name="title_budget">Budget</string>
+    <string name="title_plan">Plan</string>
+    <string name="title_convert">Convert</string>
+
+    <!--Budget Tab-->
+
+    <!--Budget Bar-->
+    <string name="budget_bar_amount">Budget Amount</string>
+    <string name="budget_bar_spent">Budget Spent</string>
+    <string name="budget_bar_left">Budget Left</string>
+    <string name="budget_bar_emptyamount">-</string>
+
+    <!--Budget Buttons-->
+    <string name="budget_button_add">Add Budget Entry</string>
+    <string name="budget_button_retrieve">Get Budget Entries</string>
+    <string name="budget_button_reset">Reset the Budget</string>
+    <string name="budget_button_set">Set the Budget</string>
+
+    <!--Budget Hints-->
+    <string name="budget_hint_type">Enter the type of purchase</string>
+    <string name="budget_hint_amount">Enter the amount spent</string>
+    <string name="budget_hint_date">Enter the date purchased (mm/dd/yy)</string>
+    <string name="budget_hint_set">Enter the budget amount</string>
+
+    <!--Plan Tab-->
+
+    <!--Convert Tab-->
+    <string name="hint_amount">Enter your amount</string>
+    <string name="convert_amount">Convert:</string>
+    <string name="tip_amount">Tip:</string>
+    <string name="tip_percent">15%</string>
+    <string name="convert_to">--></string>
+    <string name="convert_total">Total:</string>
+    <string name="add_event">Add Event</string>
+</resources>

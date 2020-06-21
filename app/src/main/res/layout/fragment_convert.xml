@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="3"
+    tools:context=".ui.convert.ConvertFragment">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_gravity="fill_horizontal"
+        android:layout_column="0"
+        android:layout_row="0"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/originalCurrencySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/currencies"
+            android:spinnerMode="dialog"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="2"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text="@string/convert_to"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Spinner
+            android:id="@+id/newCurrencySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/currencies"
+            android:spinnerMode="dialog"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="2"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_gravity="fill_horizontal"
+        android:layout_column="0"
+        android:layout_row="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tipPercentage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/tip_percent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="1"
+            android:layout_gravity="end"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="10dp"/>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:max="30"
+            android:padding="8dp"
+            android:progress="15"
+            android:layout_weight="5"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/currencyEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="17"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="10dp"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:layout_column="0"
+        android:layout_row="2"
+        android:layout_columnSpan="3"
+        android:maxLength="10"
+        android:importantForAutofill="no"
+        android:textColor="#00000000"
+        android:background="@android:color/transparent"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/textViewEnterConvert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="10dp"
+        android:background="@color/editText"
+        android:elevation="4dp"
+        android:gravity="fill_horizontal"
+        android:hint="@string/hint_amount"
+        android:textColor="@color/colorPrimaryDark"
+        android:padding="12dp"
+        android:layout_column="0"
+        android:layout_row="2"
+        android:layout_columnSpan="3"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_gravity="fill_horizontal"
+        android:layout_column="0"
+        android:layout_row="3"
+        android:orientation="horizontal"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/convert_amount"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/convertedCurrency"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/textView"
+            android:elevation="4dp"
+            android:padding="12dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="3"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_gravity="fill_horizontal"
+        android:layout_column="0"
+        android:layout_row="4"
+        android:orientation="horizontal"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tip_amount"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/convertedTip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/textView"
+            android:elevation="4dp"
+            android:padding="12dp"
+            android:layout_weight="3"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_gravity="fill_horizontal"
+        android:layout_column="0"
+        android:layout_row="5"
+        android:orientation="horizontal"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/convert_total"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/convertedTotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/textView"
+            android:elevation="4dp"
+            android:padding="12dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="3" />
+    </LinearLayout>
+
+</GridLayout>
